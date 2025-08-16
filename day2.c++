@@ -18,7 +18,7 @@ int missNo(vector<int> &array)
 
 int main()
 {
-    vector<int> array = {1, 2, 7, 3, 4, 5};
+    vector<int> array = {1, 2, 7, 3, 4, 5,8};
     cout << "Missing No = " << missNo(array);
 
     return 0;
