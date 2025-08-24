@@ -7,7 +7,6 @@ string sortWord(string s) {
     for (int i = 0; i < s.length(); i++) {
         for (int j = i + 1; j < s.length(); j++) {
             if (s[i] > s[j]) {
-                // swap
                 char temp = s[i];
                 s[i] = s[j];
                 s[j] = temp;
@@ -18,7 +17,7 @@ string sortWord(string s) {
 }
 
 int main() {
-     vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+    vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
     unordered_map<string, vector<string>> mp;
 
     for (string w : strs) {
