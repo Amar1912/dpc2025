@@ -18,23 +18,28 @@ string sortWord(string s) {
 }
 
 int main() {
-    vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+     vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
     unordered_map<string, vector<string>> mp;
 
-    // Group by sorted form
     for (string w : strs) {
         string key = sortWord(w);
         mp[key].push_back(w);
     }
 
-    // Print groups
+    vector<vector<string>> result;
     for (auto it : mp) {
+        result.push_back(it.second);
+    }
+
+    cout << "[ ";
+    for (auto group : result) {
         cout << "[ ";
-        for (string w : it.second) {
+        for (string w : group) {
             cout << w << " ";
         }
-        cout << "]\n";
+        cout << "] ";
     }
+    cout << "]\n";
 
     return 0;
 }
